@@ -1,21 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bienvenido</title>
+@extends('layouts.app')
 
-    <!-- Link de Bootstrap 5.3 desde CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+@section('titulo', 'Lista de Posts')
 
-    <div class="text-center">
-        <h1 class="display-4 text-primary">Lista de posts</h1>
+@section('content')
+<div class="py-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold">Bienvenido al Blog</h1>
+        <p class="lead text-muted">Explora todos los posts publicados por nuestra comunidad.</p>
     </div>
- 
 
-    <!-- Script de Bootstrap (opcional si necesitas JS de componentes) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YsmEpl1cR6KAGgO9h+QHbf/fcH0zv+G9YjF8PqG1NNSJByXWZC9kNLO13VboE2E3" crossorigin="anonymous"></script>
-</body>
-</html>
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <a href="{{ url('/posts') }}" class="btn btn-primary">
+                    Ver Posts
+                </a>
+                <a href="{{ url('/posts/create') }}" class="btn btn-success">
+                    Crear Nuevo
+                </a>
+                <a href="{{ url('/posts/edit') }}" class="btn btn-warning text-white">
+                    Editar Post
+                </a>
+                <a href="{{ url('/posts/1') }}" class="btn btn-info text-white">
+                    Detalles del Post
+                </a>
+            </div>
+      
+                   <h2 class="h4 mb-4">Lista de todos los posts</h2>
+            <p class="text-muted">Aquí se mostrará la lista de posts disponibles.</p>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('autores')
+<div class="text-center mt-4 text-muted small">
+    <p>Creado por Ing. Luis Pineda</p>
+</div>
+@endsection

@@ -20,9 +20,9 @@ class homeController extends Controller
     return view('posts.edit');
    }
 
-   function show($id,$categoria)
+   function show($id)
    {
-    return view('posts.show',["post" => $id,"categoria" =>$categoria] );
+    return view('posts.show',["post" => $id] );
    }
 
 }

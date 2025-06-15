@@ -9,6 +9,6 @@ Route::get('/', function () {
 
 //ruta asignada con un controlador y metodo
 Route::get('/posts', [homeController::class,"index"]);
-Route::get('/post/create', [homeController::class,"create"]);
-Route::get('/post/edit', [homeController::class,"edit"]);
-Route::get('/post/{id}/{categoria}', [homeController::class,"show"]);
+Route::get('/posts/create', [homeController::class,"create"]);
+Route::get('/posts/edit', [homeController::class,"edit"]);
+Route::get('/posts/{id}', [homeController::class,"show"]);

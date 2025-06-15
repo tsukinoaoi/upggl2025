@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bienvenido</title>
+@extends('layouts.app')
 
-    <!-- Link de Bootstrap 5.3 desde CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+@section('titulo', 'Editar post')
 
-    <div class="text-center">
-        <h1 class="display-4 text-primary">Editar post</h1>
+@section('content')
+<div class="py-5">
+    <div class="text-center mb-4">
+        <h1 class="display-5 fw-bold">Editar post</h1>
+        <p class="lead text-muted">Aca podras editar un post.</p>
+        <a href="{{ url('/posts') }}" class="btn btn-success">volver</a>
+
     </div>
 
-    <!-- Script de Bootstrap (opcional si necesitas JS de componentes) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YsmEpl1cR6KAGgO9h+QHbf/fcH0zv+G9YjF8PqG1NNSJByXWZC9kNLO13VboE2E3" crossorigin="anonymous"></script>
-</body>
-</html>
+</div>
+@endsection
+
+@section('autores')
+<div class="text-center mt-4 text-muted small">
+    <p>Creado por Ing. Luis Pineda</p>
+</div>
+@endsection
