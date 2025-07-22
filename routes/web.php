@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,10 +10,10 @@ Route::get('/', function () {
 
 // Agrupamos todas las rutas bajo el middleware 'auth'
 Route::middleware('auth')->group(function () {
-    Route::get('/posts', [HomeController::class, 'index']);
-    Route::get('/posts/create', [HomeController::class, 'create']);
-    Route::get('/posts/edit', [HomeController::class, 'edit']);
-    Route::get('/posts/{id}', [HomeController::class, 'show']);
+    Route::get('/posts', [PostController::class, 'index']);
+    Route::get('/posts/create', [PostController::class, 'create']);
+    Route::get('/posts/edit', [PostController::class, 'edit']);
+    Route::get('/posts/{id}', [PostController::class, 'show']);
 });
 
 //rutas de autenticacion
